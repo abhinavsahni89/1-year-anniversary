@@ -4,33 +4,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Happy 1 Year, Harshita 💛</title>
-  <meta name="description" content="A small website for our 1 year anniversary." />
+  <meta name="description" content="A 1 year anniversary page for Harshita." />
   <style>
     :root{
       --bg:#0b0b10; --text:#f6f6fb; --muted:#b9b9d0; --line:rgba(255,255,255,.08);
       --shadow: 0 18px 60px rgba(0,0,0,.55);
       --radius: 18px; --max: 980px;
-      font-synthesis-weight:none;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1200px 800px at 20% 10%, rgba(239,71,111,.18), transparent 55%),
-                  radial-gradient(1200px 800px at 80% 30%, rgba(255,209,102,.16), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(239,71,111,.18), transparent 55%),
+        radial-gradient(1200px 800px at 80% 30%, rgba(255,209,102,.16), transparent 55%),
+        var(--bg);
       color:var(--text);
       line-height:1.6;
     }
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+
     header{
-      position:sticky; top:0; z-index:5; backdrop-filter: blur(10px);
-      background: rgba(11,11,16,.55); border-bottom:1px solid var(--line);
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,11,16,.55);
+      border-bottom:1px solid var(--line);
     }
     header .inner{
       max-width:var(--max); margin:0 auto; width:100%;
-      padding:14px 18px; display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
     }
     .brand{display:flex; flex-direction:column}
     .brand b{letter-spacing:.3px}
@@ -39,9 +43,6 @@
     nav a{font-size:13px; text-decoration:none; color:var(--muted)}
     nav a:hover{color:var(--text)}
 
-    .hero{margin-top:18px; display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; align-items:stretch}
-    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
-
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border:1px solid var(--line);
@@ -49,71 +50,106 @@
       box-shadow:var(--shadow);
       overflow:hidden;
     }
+
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+
     .hero-text{padding:24px}
     .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:8px 12px; border-radius:999px;
+      display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap;
+      padding:8px 12px;
+      border-radius:999px;
       border:1px solid var(--line);
-      color:var(--muted); font-size:13px;
+      color:var(--muted);
+      font-size:13px;
       background: rgba(255,255,255,.03);
-      flex-wrap:wrap;
     }
+
     h1{margin:14px 0 8px; font-size:44px; line-height:1.1}
     @media (max-width:520px){ h1{font-size:36px} }
-    .sub{color:var(--muted); max-width:54ch}
+
+    .sub{color:var(--muted); max-width:58ch}
     .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px;
+      padding:10px 14px;
+      border-radius:12px;
       border:1px solid var(--line);
-      text-decoration:none; font-size:14px;
+      text-decoration:none;
+      font-size:14px;
       background: rgba(255,255,255,.04);
     }
-    .btn.primary{background: linear-gradient(90deg, rgba(255,209,102,.28), rgba(239,71,111,.22)); border-color: rgba(255,209,102,.35)}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(255,209,102,.28), rgba(239,71,111,.22));
+      border-color: rgba(255,209,102,.35)
+    }
     .btn:hover{transform: translateY(-1px)}
 
     .hero-photo{position:relative; min-height:320px; display:flex}
-    .hero-photo img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.02)}
+    .hero-photo img{width:100%; height:100%; object-fit:cover; display:block}
     .corner{
       position:absolute; right:14px; bottom:14px;
-      padding:10px 12px; border-radius:14px;
+      padding:10px 12px;
+      border-radius:14px;
       border:1px solid var(--line);
       background: rgba(11,11,16,.55);
       backdrop-filter: blur(10px);
-      font-size:13px; color:var(--muted);
+      font-size:13px;
+      color:var(--muted);
     }
 
     section{margin-top:22px}
-    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    @media (max-width:860px){ .grid2{grid-template-columns:1fr} }
     .section-title{padding:18px 20px; border-bottom:1px solid var(--line)}
     .section-title h2{margin:0; font-size:18px}
     .section-title p{margin:6px 0 0; color:var(--muted); font-size:13px}
     .content{padding:18px 20px}
+
     .timeline{display:flex; flex-direction:column; gap:14px}
     .moment{
-      padding:14px; border:1px solid var(--line);
-      border-radius:14px; background: rgba(255,255,255,.03);
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(255,255,255,.03);
     }
     .moment b{display:block}
     .moment span{color:var(--muted); font-size:13px}
 
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    @media (max-width:860px){ .grid2{grid-template-columns:1fr} }
+
     .gallery{
-      display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; padding:18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      padding:18px;
     }
     @media (max-width:860px){ .gallery{grid-template-columns: repeat(2, 1fr);} }
     .gallery img{
-      width:100%; height:160px; object-fit:cover; border-radius:14px;
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:14px;
       border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
     }
 
     .list{display:grid; grid-template-columns:1fr 1fr; gap:10px}
     @media (max-width:650px){ .list{grid-template-columns:1fr} }
     .chip{
-      padding:12px 14px; border-radius:14px;
-      border:1px solid var(--line); background: rgba(255,255,255,.03);
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
     }
+
     footer{margin-top:34px; color:var(--muted); font-size:13px; text-align:center}
+
     #secret{display:none}
     :target#secret{display:block}
   </style>
@@ -147,6 +183,7 @@
           One year down, a lifetime to go. This little page is a scrapbook of the moments,
           the laughs, the lessons, and the love.
         </p>
+
         <div class="cta-row">
           <a class="btn primary" href="#letter">Read my letter</a>
           <a class="btn" href="#photos">Open the gallery</a>
@@ -155,7 +192,7 @@
       </div>
 
       <div class="card hero-photo">
-        <img src="images/hero.jpg.jpeg" alt="Us" />
+        <img src="hero.jpg.jpeg" alt="Us" />
         <div class="corner">
           Started: <b>12 Jan 2025</b><br/>
           Anniversary: <b>12 Jan 2026</b><br/>
@@ -179,6 +216,7 @@
               Since that day, I’ve been falling more and more in love with you—quietly, confidently, and completely.
             </div>
           </div>
+
           <div class="moment">
             <b>🍜 Our first proper “us” moment</b>
             <span>Aug 2024</span>
@@ -187,6 +225,7 @@
               I still replay those little moments because that’s when I knew this wasn’t just a spark—this was something real.
             </div>
           </div>
+
           <div class="moment">
             <b>🌧️ Even when it’s hard</b>
             <span>Right now</span>
@@ -196,6 +235,7 @@
               I choose you, even on the tough days.
             </div>
           </div>
+
           <div class="moment">
             <b>🌈 What you are to me</b>
             <span>Always</span>
@@ -215,21 +255,21 @@
       </div>
 
       <div class="gallery">
-        <img src="images/1.jpg.jpeg"  alt="Memory 1">
-        <img src="images/2.jpg.jpeg"  alt="Memory 2">
-        <img src="images/3.jpg.jpeg"  alt="Memory 3">
-        <img src="images/4.jpg.jpeg"  alt="Memory 4">
-        <img src="images/5.jpg.jpeg"  alt="Memory 5">
-        <img src="images/6.jpg.jpeg"  alt="Memory 6">
-        <img src="images/7.jpg.jpeg"  alt="Memory 7">
-        <img src="images/8.jpg.jpeg"  alt="Memory 8">
-        <img src="images/9.jpg.jpeg"  alt="Memory 9">
-        <img src="images/10.jpg.jpeg" alt="Memory 10">
-        <img src="images/11.jpg.jpeg" alt="Memory 11">
-        <img src="images/12.jpg.jpeg" alt="Memory 12">
-        <img src="images/13.jpg.jpeg" alt="Memory 13">
-        <img src="images/14.jpg.jpeg" alt="Memory 14">
-        <img src="images/15.jpg.jpeg" alt="Memory 15">
+        <img src="1.jpg.jpeg"  alt="Memory 1">
+        <img src="2.jpg.jpeg"  alt="Memory 2">
+        <img src="3.jpg.jpeg"  alt="Memory 3">
+        <img src="4.jpg.jpeg"  alt="Memory 4">
+        <img src="5.jpg.jpeg"  alt="Memory 5">
+        <img src="6.jpg.jpeg"  alt="Memory 6">
+        <img src="7.jpg.jpeg"  alt="Memory 7">
+        <img src="8.jpg.jpeg"  alt="Memory 8">
+        <img src="9.jpg.jpeg"  alt="Memory 9">
+        <img src="10.jpg.jpeg" alt="Memory 10">
+        <img src="11.jpg.jpeg" alt="Memory 11">
+        <img src="12.jpg.jpeg" alt="Memory 12">
+        <img src="13.jpg.jpeg" alt="Memory 13">
+        <img src="14.jpg.jpeg" alt="Memory 14">
+        <img src="15.jpg.jpeg" alt="Memory 15">
       </div>
     </section>
 
