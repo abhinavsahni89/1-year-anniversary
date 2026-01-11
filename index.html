@@ -179,6 +179,7 @@
   <!-- ANNIVERSARY MODAL -->
   <div id="anniversaryModal" role="dialog" aria-modal="true" aria-label="Anniversary message">
     <div class="modal-card">
+      <!-- UPDATED: interactive popup text (no "tomorrow") -->
       <h1 id="typeText"></h1>
       <p class="modal-sub">12 Jan 2025 → 12 Jan 2026</p>
       <div class="modal-hint">tap anywhere 💛</div>
@@ -215,7 +216,6 @@
       </div>
 
       <div class="card hero-photo">
-        <!-- Your repo filename is hero.jpg.jpeg -->
         <img data-file="hero.jpg.jpeg" alt="Us" loading="eager" />
         <div class="corner">
           Started: <b>12 Jan 2025</b><br/>
@@ -252,7 +252,6 @@
         <p>15 memories 💛</p>
       </div>
 
-      <!-- Your repo filenames are 1.jpg.jpeg ... 15.jpg.jpeg -->
       <div class="gallery">
         <img data-file="1.jpg.jpeg"  alt="Memory 1"  loading="lazy">
         <img data-file="2.jpg.jpeg"  alt="Memory 2"  loading="lazy">
@@ -282,32 +281,23 @@
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* ---------- IMAGE PATH FIX FOR GITHUB PAGES ----------
-       Sometimes GitHub Pages is configured to publish from /docs.
-       In that case, your index.html is in /docs but images are in the repo root.
-       This loader tries BOTH:
-         "./filename"   (same folder)
-         "../filename"  (parent folder)
-       so images show in either setup.
-    */
+    /* ---------- IMAGE PATH FIX FOR GITHUB PAGES ---------- */
     const PREFIX_TRIES = ["./", "../"];
-
     function setImgWithPrefixFallback(img, file) {
       let p = 0;
       function tryNext() {
-        if (p >= PREFIX_TRIES.length) return; // keep broken icon if truly missing
+        if (p >= PREFIX_TRIES.length) return;
         img.src = PREFIX_TRIES[p++] + file;
       }
       img.onerror = tryNext;
       tryNext();
     }
-
     document.querySelectorAll("img[data-file]").forEach(img => {
       setImgWithPrefixFallback(img, img.dataset.file);
     });
 
-    /* TYPEWRITER MODAL */
-    const text = "Happy 1 Year Anniversary, Babe 💛";
+    /* TYPEWRITER MODAL (UPDATED TEXT) */
+    const text = "Happy 1st Anniversary, Babe 💛";
     let i = 0;
     const el = document.getElementById("typeText");
     (function type(){
