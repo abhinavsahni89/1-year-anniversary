@@ -1,18 +1,24 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Happy 1 Year, Harshita 💛</title>
-  <meta name="description" content="A 1 year anniversary page for Harshita." />
+  <meta name="description" content="A small website for our 1 year anniversary." />
+
   <style>
     :root{
-      --bg:#0b0b10; --text:#f6f6fb; --muted:#b9b9d0; --line:rgba(255,255,255,.08);
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --radius: 18px; --max: 980px;
+      --bg:#0b0b10;
+      --text:#f6f6fb;
+      --muted:#b9b9d0;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 18px 60px rgba(0,0,0,.55);
+      --radius:18px;
+      --max:980px;
+      font-synthesis-weight:none;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
@@ -23,29 +29,33 @@
       color:var(--text);
       line-height:1.6;
     }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 64px}
 
     header{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,11,16,.55);
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(10px);
+      background:rgba(11,11,16,.55);
       border-bottom:1px solid var(--line);
     }
     header .inner{
-      max-width:var(--max); margin:0 auto; width:100%;
+      max-width:var(--max);
+      margin:0 auto;
       padding:14px 18px;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
     }
-    .brand{display:flex; flex-direction:column}
+    .brand{display:flex;flex-direction:column}
     .brand b{letter-spacing:.3px}
-    .brand span{color:var(--muted); font-size:13px}
-    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-    nav a{font-size:13px; text-decoration:none; color:var(--muted)}
+    .brand span{color:var(--muted);font-size:13px}
+    nav{display:flex;flex-wrap:wrap;justify-content:flex-end}
+    nav a{font-size:13px;color:var(--muted);margin-left:12px}
     nav a:hover{color:var(--text)}
 
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
@@ -55,108 +65,126 @@
     .hero{
       margin-top:18px;
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns:1.1fr .9fr;
       gap:18px;
       align-items:stretch;
     }
-    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
-
+    @media(max-width:860px){.hero{grid-template-columns:1fr}}
     .hero-text{padding:24px}
     .pill{
-      display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
       padding:8px 12px;
       border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
       font-size:13px;
-      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      flex-wrap:wrap;
+      margin-bottom:10px;
     }
-
-    h1{margin:14px 0 8px; font-size:44px; line-height:1.1}
-    @media (max-width:520px){ h1{font-size:36px} }
-
-    .sub{color:var(--muted); max-width:58ch}
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    h1{font-size:44px;margin:14px 0 10px;line-height:1.1}
+    @media (max-width:520px){h1{font-size:36px}}
+    .sub{color:var(--muted);max-width:54ch}
+    .cta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding:10px 14px;
       border-radius:12px;
       border:1px solid var(--line);
-      text-decoration:none;
+      background:rgba(255,255,255,.04);
+      transition:transform .15s ease;
       font-size:14px;
-      background: rgba(255,255,255,.04);
     }
     .btn.primary{
-      background: linear-gradient(90deg, rgba(255,209,102,.28), rgba(239,71,111,.22));
-      border-color: rgba(255,209,102,.35)
+      background:linear-gradient(90deg, rgba(255,209,102,.28), rgba(239,71,111,.22));
+      border-color:rgba(255,209,102,.35);
     }
-    .btn:hover{transform: translateY(-1px)}
+    .btn:hover{transform:translateY(-1px)}
 
-    .hero-photo{position:relative; min-height:320px; display:flex}
-    .hero-photo img{width:100%; height:100%; object-fit:cover; display:block}
+    .hero-photo{position:relative;min-height:320px;display:flex}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}
     .corner{
-      position:absolute; right:14px; bottom:14px;
-      padding:10px 12px;
-      border-radius:14px;
+      position:absolute;right:14px;bottom:14px;
+      padding:10px 12px;border-radius:14px;
       border:1px solid var(--line);
-      background: rgba(11,11,16,.55);
-      backdrop-filter: blur(10px);
-      font-size:13px;
-      color:var(--muted);
+      background:rgba(11,11,16,.55);
+      backdrop-filter:blur(10px);
+      font-size:13px;color:var(--muted);
     }
 
     section{margin-top:22px}
-    .section-title{padding:18px 20px; border-bottom:1px solid var(--line)}
-    .section-title h2{margin:0; font-size:18px}
-    .section-title p{margin:6px 0 0; color:var(--muted); font-size:13px}
+    .section-title{padding:18px 20px;border-bottom:1px solid var(--line)}
+    .section-title h2{margin:0;font-size:18px}
+    .section-title p{margin:6px 0 0;color:var(--muted);font-size:13px}
     .content{padding:18px 20px}
-
-    .timeline{display:flex; flex-direction:column; gap:14px}
-    .moment{
-      padding:14px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background: rgba(255,255,255,.03);
-    }
-    .moment b{display:block}
-    .moment span{color:var(--muted); font-size:13px}
-
-    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    @media (max-width:860px){ .grid2{grid-template-columns:1fr} }
 
     .gallery{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:10px;
       padding:18px;
     }
-    @media (max-width:860px){ .gallery{grid-template-columns: repeat(2, 1fr);} }
+    @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}}
     .gallery img{
       width:100%;
       height:160px;
       object-fit:cover;
       border-radius:14px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.02);
+      display:block;
+      background:rgba(255,255,255,.02);
     }
 
-    .list{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-    @media (max-width:650px){ .list{grid-template-columns:1fr} }
-    .chip{
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+    footer{margin-top:34px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* ANNIVERSARY MODAL */
+    #anniversaryModal{
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at top,
+          rgba(255,209,102,.35),
+          rgba(239,71,111,.25),
+          rgba(11,11,16,.95));
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:999;
     }
+    .modal-card{
+      padding:42px 30px;
+      border-radius:26px;
+      background:rgba(11,11,16,.75);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,.15);
+      text-align:center;
+      max-width:min(520px, 90vw);
+    }
+    .modal-card h1{font-size:42px;margin:0;line-height:1.1}
+    .modal-sub{margin-top:10px;color:var(--muted)}
+    .modal-hint{margin-top:18px;font-size:13px;color:var(--muted)}
 
-    footer{margin-top:34px; color:var(--muted); font-size:13px; text-align:center}
-
-    #secret{display:none}
-    :target#secret{display:block}
+    @keyframes floatUp{
+      to{transform:translateY(-90px);opacity:0}
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- ANNIVERSARY MODAL -->
+  <div id="anniversaryModal" role="dialog" aria-modal="true" aria-label="Anniversary message">
+    <div class="modal-card">
+      <h1 id="typeText"></h1>
+      <p class="modal-sub">12 Jan 2025 → 12 Jan 2026</p>
+      <div class="modal-hint">tap anywhere 💛</div>
+    </div>
+  </div>
+
   <header>
     <div class="inner">
       <div class="brand">
@@ -164,36 +192,31 @@
         <span>12 Jan 2025 → 12 Jan 2026</span>
       </div>
       <nav>
-        <a href="#story">Story</a>
-        <a href="#photos">Photos</a>
         <a href="#letter">Letter</a>
-        <a href="#reasons">Reasons</a>
+        <a href="#photos">Photos</a>
       </nav>
     </div>
   </header>
 
   <div class="wrap">
+
     <div class="hero">
       <div class="card hero-text">
-        <div class="pill">💛 One year of us • <span id="daysTogether"></span></div>
-        <div class="pill" style="margin-top:10px">🎉 Anniversary • <span id="daysToAnniversary"></span></div>
-        <div class="pill" style="margin-top:10px">✈️ Counting down • <span id="daysToMeet"></span></div>
+        <div class="pill">💛 Happy 1 Year Anniversary</div>
+        <div class="pill">🎉 Forever us</div>
 
-        <h1>To Harshita,<br/>my favourite person.</h1>
-        <p class="sub">
-          One year down, a lifetime to go. This little page is a scrapbook of the moments,
-          the laughs, the lessons, and the love.
-        </p>
+        <h1>Happy Anniversary,<br/>my love 💛</h1>
+        <p class="sub">One year down. A lifetime to go.</p>
 
         <div class="cta-row">
           <a class="btn primary" href="#letter">Read my letter</a>
-          <a class="btn" href="#photos">Open the gallery</a>
-          <a class="btn" href="#secret">Hidden message</a>
+          <a class="btn" href="#photos">View photos</a>
         </div>
       </div>
 
       <div class="card hero-photo">
-        <img src="hero.jpg.jpeg" alt="Us" />
+        <!-- Your repo filename is hero.jpg.jpeg -->
+        <img data-file="hero.jpg.jpeg" alt="Us" loading="eager" />
         <div class="corner">
           Started: <b>12 Jan 2025</b><br/>
           Anniversary: <b>12 Jan 2026</b><br/>
@@ -202,187 +225,116 @@
       </div>
     </div>
 
-    <section id="story" class="card">
+    <section id="letter" class="card">
       <div class="section-title">
-        <h2>Our story</h2>
-        <p>A few moments I never want to forget.</p>
+        <h2>A letter</h2>
+        <p>Specific, honest, and for you.</p>
       </div>
       <div class="content">
-        <div class="timeline">
-          <div class="moment">
-            <b>🌟 How we started</b>
-            <span>16 Aug 2024 • IDF, Brisbane</span>
-            <div>
-              We met at IDF in Brisbane and something about you felt familiar from the very beginning.
-              Since that day, I’ve been falling more and more in love with you—quietly, confidently, and completely.
-            </div>
-          </div>
+        <p>Dear Harshita,</p>
 
-          <div class="moment">
-            <b>🍜 Our first proper “us” moment</b>
-            <span>Aug 2024</span>
-            <div>
-              From the first real conversations to the first laughs that felt effortless, you made everything feel easy.
-              I still replay those little moments because that’s when I knew this wasn’t just a spark—this was something real.
-            </div>
-          </div>
+        <p>
+          Happy 1 year, Bebu. 12th January 2025 will always mean something to me, because it marks the day “us” became official.
+          I’m grateful for you—your love, your patience, and the way you make life feel warmer.
+        </p>
 
-          <div class="moment">
-            <b>🌧️ Even when it’s hard</b>
-            <span>Right now</span>
-            <div>
-              Bebu… I know you’re mad at me right now, and I’m sorry. I’m genuinely sorry for whatever I did that hurt you
-              or made you feel unheard. I don’t want to win an argument—I want to protect what we have.
-              I choose you, even on the tough days.
-            </div>
-          </div>
+        <p>
+          I love you. I’m sorry when I fall short. And I choose you—always.
+        </p>
 
-          <div class="moment">
-            <b>🌈 What you are to me</b>
-            <span>Always</span>
-            <div>
-              You’re not just my girlfriend. You’re my best friend. And lately, with you in India, I’ve been missing you so much.
-              The distance is loud, but my feelings are louder—and they’re steady.
-            </div>
-          </div>
-        </div>
+        <p>Love,<br/>Abhi</p>
       </div>
     </section>
 
     <section id="photos" class="card">
       <div class="section-title">
         <h2>Photos</h2>
-        <p>15 memories ❤️</p>
+        <p>15 memories 💛</p>
       </div>
 
+      <!-- Your repo filenames are 1.jpg.jpeg ... 15.jpg.jpeg -->
       <div class="gallery">
-        <img src="1.jpg.jpeg"  alt="Memory 1">
-        <img src="2.jpg.jpeg"  alt="Memory 2">
-        <img src="3.jpg.jpeg"  alt="Memory 3">
-        <img src="4.jpg.jpeg"  alt="Memory 4">
-        <img src="5.jpg.jpeg"  alt="Memory 5">
-        <img src="6.jpg.jpeg"  alt="Memory 6">
-        <img src="7.jpg.jpeg"  alt="Memory 7">
-        <img src="8.jpg.jpeg"  alt="Memory 8">
-        <img src="9.jpg.jpeg"  alt="Memory 9">
-        <img src="10.jpg.jpeg" alt="Memory 10">
-        <img src="11.jpg.jpeg" alt="Memory 11">
-        <img src="12.jpg.jpeg" alt="Memory 12">
-        <img src="13.jpg.jpeg" alt="Memory 13">
-        <img src="14.jpg.jpeg" alt="Memory 14">
-        <img src="15.jpg.jpeg" alt="Memory 15">
-      </div>
-    </section>
-
-    <section class="grid2">
-      <div id="letter" class="card">
-        <div class="section-title">
-          <h2>A letter</h2>
-          <p>Specific, honest, and for you.</p>
-        </div>
-        <div class="content">
-          <p>Dear Harshita,</p>
-
-          <p>
-            Happy 1 year, Bebu. 12th January 2025 will always mean something to me, because it marks the day “us” became official—
-            but if I’m honest, my heart started choosing you from the day we met at IDF in Brisbane on 16th August 2024.
-          </p>
-
-          <p>
-            I know you’re mad at me right now, and I’m sorry. I’m really sorry, Bebu. I hate that anything I did made you feel upset
-            or alone in it. I don’t want to be the reason you feel heavy. I want to be the person who brings you peace.
-            If I’ve missed something, I’m listening—and I’ll do better, not just say it.
-          </p>
-
-          <p>
-            You’re not only my girlfriend—you’re my best friend. And with you in India right now, I feel that absence in everything.
-            I miss your voice, your presence, your little reactions, and the comfort of simply knowing you’re close.
-            I miss you more than I can explain properly.
-          </p>
-
-          <p>
-            And I need you to know this: I couldn’t have asked for anything better in my life. As a partner, as my person,
-            as someone I want to build a future with—you’re it. The way you look after my family like they’re your own…
-            that means the world to me. It’s rare, it’s beautiful, and it makes me feel incredibly lucky.
-          </p>
-
-          <p>
-            I’m counting down the days because I’m seeing you on the 17th, and I can’t wait. I’m holding onto that like a promise—
-            because coming back to you is my favourite thing.
-          </p>
-
-          <p>
-            I love you, Harshita. I love you, Bebu.<br/>
-            I’m sorry. And I’m yours.
-          </p>
-
-          <p>Love,<br/>Abhi</p>
-        </div>
-      </div>
-
-      <div id="reasons" class="card">
-        <div class="section-title">
-          <h2>Reasons I love you</h2>
-          <p>Short, punchy, true.</p>
-        </div>
-        <div class="content">
-          <div class="list">
-            <div class="chip">You’re my best friend.</div>
-            <div class="chip">You make ordinary days feel lighter.</div>
-            <div class="chip">You care deeply, even when it’s hard.</div>
-            <div class="chip">You look after my family like your own.</div>
-            <div class="chip">You feel like home—even from far away.</div>
-            <div class="chip">I’m sorry when I mess up, and I’ll do better.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="secret" class="card">
-      <div class="section-title">
-        <h2>Hidden message</h2>
-        <p>Only shows when someone clicks “Hidden message”.</p>
-      </div>
-      <div class="content">
-        <p>
-          Harshita — if you found this, here’s the truth:
-          <b>I’m still falling for you.</b>
-        </p>
-        <p>
-          Redeem this for: <b>a date night</b> (your choice) + <b>one big hug on the 17th</b>.
-        </p>
+        <img data-file="1.jpg.jpeg"  alt="Memory 1"  loading="lazy">
+        <img data-file="2.jpg.jpeg"  alt="Memory 2"  loading="lazy">
+        <img data-file="3.jpg.jpeg"  alt="Memory 3"  loading="lazy">
+        <img data-file="4.jpg.jpeg"  alt="Memory 4"  loading="lazy">
+        <img data-file="5.jpg.jpeg"  alt="Memory 5"  loading="lazy">
+        <img data-file="6.jpg.jpeg"  alt="Memory 6"  loading="lazy">
+        <img data-file="7.jpg.jpeg"  alt="Memory 7"  loading="lazy">
+        <img data-file="8.jpg.jpeg"  alt="Memory 8"  loading="lazy">
+        <img data-file="9.jpg.jpeg"  alt="Memory 9"  loading="lazy">
+        <img data-file="10.jpg.jpeg" alt="Memory 10" loading="lazy">
+        <img data-file="11.jpg.jpeg" alt="Memory 11" loading="lazy">
+        <img data-file="12.jpg.jpeg" alt="Memory 12" loading="lazy">
+        <img data-file="13.jpg.jpeg" alt="Memory 13" loading="lazy">
+        <img data-file="14.jpg.jpeg" alt="Memory 14" loading="lazy">
+        <img data-file="15.jpg.jpeg" alt="Memory 15" loading="lazy">
       </div>
     </section>
 
     <footer>
       Made with love • © Abhi • <span id="year"></span>
     </footer>
+
   </div>
 
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const start = new Date("2025-01-12");
-    const anniversary = new Date("2026-01-12");
-    const meet = new Date("2026-01-17");
-    const now = new Date();
+    /* ---------- IMAGE PATH FIX FOR GITHUB PAGES ----------
+       Sometimes GitHub Pages is configured to publish from /docs.
+       In that case, your index.html is in /docs but images are in the repo root.
+       This loader tries BOTH:
+         "./filename"   (same folder)
+         "../filename"  (parent folder)
+       so images show in either setup.
+    */
+    const PREFIX_TRIES = ["./", "../"];
 
-    const diffDays = Math.floor((now - start) / (1000*60*60*24));
-    document.getElementById("daysTogether").textContent =
-      (isNaN(diffDays) ? "Edit start date in code" : diffDays + " days together");
+    function setImgWithPrefixFallback(img, file) {
+      let p = 0;
+      function tryNext() {
+        if (p >= PREFIX_TRIES.length) return; // keep broken icon if truly missing
+        img.src = PREFIX_TRIES[p++] + file;
+      }
+      img.onerror = tryNext;
+      tryNext();
+    }
 
-    const daysToAnniversary = Math.ceil((anniversary - now) / (1000*60*60*24));
-    document.getElementById("daysToAnniversary").textContent =
-      isNaN(daysToAnniversary) ? "Set anniversary date in code" :
-      (daysToAnniversary === 0 ? "Today" :
-       daysToAnniversary === 1 ? "Tomorrow" :
-       daysToAnniversary > 1 ? daysToAnniversary + " days to go" :
-       "Happy anniversary ❤️");
+    document.querySelectorAll("img[data-file]").forEach(img => {
+      setImgWithPrefixFallback(img, img.dataset.file);
+    });
 
-    const daysToMeet = Math.ceil((meet - now) / (1000*60*60*24));
-    document.getElementById("daysToMeet").textContent =
-      (isNaN(daysToMeet) ? "Set meet date in code" :
-        (daysToMeet >= 0 ? daysToMeet + " days until I see you" : "I’m already with you ❤️"));
+    /* TYPEWRITER MODAL */
+    const text = "Happy 1 Year Anniversary, Babe 💛";
+    let i = 0;
+    const el = document.getElementById("typeText");
+    (function type(){
+      if (i < text.length) {
+        el.textContent += text[i++];
+        setTimeout(type, 70);
+      }
+    })();
+
+    /* CLOSE MODAL */
+    const modal = document.getElementById("anniversaryModal");
+    modal.onclick = () => modal.remove();
+    setTimeout(() => modal.remove(), 6500);
+
+    /* FLOATING HEARTS */
+    document.addEventListener("click", e => {
+      const h = document.createElement("div");
+      h.textContent = "💛";
+      h.style.position = "fixed";
+      h.style.left = e.clientX + "px";
+      h.style.top = e.clientY + "px";
+      h.style.animation = "floatUp 2s ease forwards";
+      h.style.pointerEvents = "none";
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 2000);
+    });
   </script>
+
 </body>
 </html>
